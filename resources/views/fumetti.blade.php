@@ -2,20 +2,26 @@
 
 @section('content')
 
-<div class="main-cont">
-   @foreach ($comics as $key => $comic)
-   <a href="{{ route('detail-fumetti', ['id' => $comic['id']]) }}">
-      <div class="card">
-         <div class="thumb">
-            <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+<div class="maincont">
+@foreach ($comics as $key => $comic)
+<div class="cardContainer">
+   <div class="carta">
+            <a href="{{ route('detail-fumetti', ['id' => $comic['id']]) }}">
+            <div class="thumb">
+               <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+            </div>
+            <div class="title">
+               {{ $comic['title'] }}
+            </div>
+         </a>
          </div>
-         <div class="title">
-            {{ $comic['title'] }}
-         </div>
-      </div>
-   </a>
-   @endforeach
+
 </div>
+   @endforeach
+  </div>
+    <div class="button">
+      <button>LOAD MORE</button>
+    </div>
 @endsection('content')
 
 

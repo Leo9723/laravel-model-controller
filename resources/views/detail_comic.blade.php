@@ -64,6 +64,6 @@
     .thumb-img{
         position: absolute;
         bottom: 290%;
-        left: 10%;
+        left: 15%;
     }
 </style>
